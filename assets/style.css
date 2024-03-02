@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: aliceblue;
+  grid-area: header;
+  font-size: 25px;
+}
+
+.categorias {
+  grid-area: categorias;
+  display: flex;
+  flex-direction: column;
+  background-color: darkgrey;
+  padding-top: 15px;
+  padding-left: 25px;
+}
+
+.list {
+  padding-top: 10px;
+}
+
+.list p {
+  margin-top: 3px;
+}
+.parentesis {
+  color: rgb(88, 88, 88);
+  font-weight: 300;
+}
+
+.productos {
+  grid-area: productos;
+  gap: 15px;
+  padding: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  background-color: aliceblue;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 550px;
+  padding: 5px;
+  background-color: rgb(195, 195, 195);
+}
+
+.producto img {
+  width: 100%;
+}
+
+.producto h2 {
+  margin-top: 15px;
+}
+
+.producto h3 {
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.producto h4 {
+  display: flex;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-weight: 400;
+  background-color: black;
+  color: white;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: aliceblue;
+}
+
+.grid-container {
+  display: grid;
+  height: 200vh;
+  grid-template-areas:
+    "header header"
+    "categorias productos"
+    "footer footer";
+  grid-template-columns: 2fr 13fr;
+  grid-template-rows: 5% 90% 5%;
+}
